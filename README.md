@@ -78,4 +78,4 @@ Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kun
 
 ## schets ideeen
 
-<img src="" alt="schets ideeen" width="50%">
+<img src="./readme/schets.png" alt="schets ideeen" width="50%">
