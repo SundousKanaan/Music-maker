@@ -66,3 +66,9 @@ Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kun
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+
+## inspiratie:
+
+- [code pen 1](https://codepen.io/yukulele/pen/BjNWxa?editors=1010)
+- [code pen 2](https://codepen.io/kucerajacob/pen/GRqBQNV)
+- [code pen 3](https://codepen.io/laurenvast/pen/jOrWXej)
