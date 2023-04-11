@@ -78,7 +78,9 @@ header{
     height: 13em;
     background-color: var(--header-bg);
 
-    padding: 1em 2em 0 1em;
+    /* padding: 1em 2em 0 1em; */
+
+    padding: 1em 1em 0 1em;
 
     position: sticky;
     top: 0;
@@ -90,12 +92,14 @@ header ul{
     height: 100%;
 
     display: flex;
+    align-items: end;
     gap: 1%;
 }
 
 header ul li{
     display: block;
     width: calc(100%/20);
+    height: 100%;
     background-color: var(--tone-bg);
     background-image: linear-gradient(var(--tone-bg), var(--tone-bg-shadow));
 
@@ -104,18 +108,27 @@ header ul li{
 
     border-radius: 50% 50% 0% 0% / 10% 10% 0% 0% ;
 
-    animation: music 1s infinite linear both;
+    /* animation: music 1s infinite linear both; */
 }
 
-.tone{
-    animation: music 1s infinite linear both;
+header ul li:nth-child(3),
+header ul li:nth-child(8),
+header ul li:nth-child(14){
+    height: 60%;
+}
+
+.playTone{
+    animation-iteration-count: infinite;
+}
+
+header ul.playTone li.tone{
+    animation: music 1s linear infinite both;
 }
 
 @keyframes music {
     0%{
         transform: scaleY(0);
     }
-
     50%{
         transform: scaleY(1);
     }
@@ -188,7 +201,7 @@ main > section:first-of-type button:first-of-type {
     background-size: 50%;
 }
 
-.play{
+main > section:first-of-type button:first-of-type.play{
     /* border: solid .3em var(--piano-dark-button-shadow); */
     background-color: var(--piano-dark-button);
     background-image: url(../images/pause-sign.svg);
