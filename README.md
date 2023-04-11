@@ -69,12 +69,14 @@ Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kun
 
 ## inspiratie:
 - [miro](https://miro.com/app/board/uXjVMVkPFGU=/?share_link_id=774277342385)
+- [API](https://api-hitloop.responsible-it.nl/)
 - [RS src](https://github.com/responsibleIT/hitloop-frontend)
 - [code pen 1](https://codepen.io/yukulele/pen/BjNWxa?editors=1010)
 - [code pen 2](https://codepen.io/kucerajacob/pen/GRqBQNV)
 - [code pen 3](https://codepen.io/laurenvast/pen/jOrWXej)
 - [code pen 4](https://codepen.io/mattlundstrom/details/wBGLmW)
-- [netto](https://codepen.io/philipnrmn/pen/gGwZKb)
+- [code pen 5](https://codepen.io/philipnrmn/pen/gGwZKb)
+- [code pen 6](https://codepen.io/UXauthority/pen/NNzvZM)
 
 ## schets ideeen
 
