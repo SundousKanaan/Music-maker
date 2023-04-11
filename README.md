@@ -75,3 +75,7 @@ Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kun
 - [code pen 3](https://codepen.io/laurenvast/pen/jOrWXej)
 - [code pen 4](https://codepen.io/mattlundstrom/details/wBGLmW)
 - [netto](https://codepen.io/philipnrmn/pen/gGwZKb)
+
+## schets ideeen
+
+<img src="" alt="schets ideeen" width="50%">
