@@ -114,7 +114,20 @@ header ul li{
 header ul li:nth-child(3),
 header ul li:nth-child(8),
 header ul li:nth-child(14){
-    height: 60%;
+    height: 70%;
+}
+
+header ul li:nth-child(1),
+header ul li:nth-child(12),
+header ul li:nth-child(18){
+    height: 30%;
+}
+
+header ul li:nth-child(3),
+header ul li:nth-child(6),
+header ul li:nth-child(10),
+header ul li:nth-child(16){
+    height: 50%;
 }
 
 .playTone{
