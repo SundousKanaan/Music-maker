@@ -134,7 +134,8 @@ header ul li:nth-child(16){
     animation-iteration-count: infinite;
 }
 
-header ul.playTone li.tone{
+/* header ul.playTone li.tone */
+header ul li.tone{
     animation: music 1s linear infinite both;
 }
 
@@ -212,10 +213,14 @@ main > section:first-of-type button{
 main > section:first-of-type button:first-of-type {
     background-image: url(../images/play-sign.svg);
     background-size: 50%;
+    visibility: hidden;
+}
+
+main > section:first-of-type button:first-of-type.activePlay{
+    visibility: visible;
 }
 
 main > section:first-of-type button:first-of-type.play{
-    /* border: solid .3em var(--piano-dark-button-shadow); */
     background-color: var(--piano-dark-button);
     background-image: url(../images/pause-sign.svg);
 }

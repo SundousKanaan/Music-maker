@@ -1,10 +1,12 @@
+// const { log } = require("tone/build/esm/core/util/Debug")
+
 let pianoList = document.querySelector("main > ul")
 let plusButton = document.querySelector("main > button")
 
 
 plusButton.addEventListener("click", () => {
     let liElement = document.createElement("li")
-    liElement.innerHTML=`
+    liElement.innerHTML = `
         <p>piano</p>
         <button></button>
         <div>
@@ -39,9 +41,20 @@ plusButton.addEventListener("click", () => {
     pianoList.appendChild(liElement);
 
     console.log("new piano");
+
+    pianoButtons = document.querySelectorAll("main ul li > div button")
+    deleteButtons = document.querySelectorAll("main ul li > button")
+
+    console.log(deleteButtons.length);
+
+    addTones();
 })
 
 
+
+// ********************************************
+// ********************************************
+const synth = new Tone.Synth().toDestination();
 
 let playButton = document.querySelector("main > section:first-of-type button:first-of-type")
 let refreshButton = document.querySelector("main > section:first-of-type button:last-of-type")
@@ -51,12 +64,30 @@ let tonesList = document.querySelector("header ul")
 let tones = document.querySelectorAll("header ul li")
 let pianoButtons = document.querySelectorAll("main ul li > div button")
 
-
 playButton.addEventListener("click", () => {
-    playButton.classList.toggle("play");
-    console.log("play");
-    tonesList.classList.toggle("playTone");
+    playButton.classList.add("play");
+    console.log("tone play");
+    // tonesList.classList.toggle("playTone");
+
+    audioCheck();
 })
+
+async function audioCheck() {
+    for (let i = 0; i < pianoButtons.length; i++) {
+        if (pianoButtons[0].classList.contains('active')) {
+            console.log("true");
+            // synth.triggerAttackRelease('C4', '8n');
+            // await Tone.start();
+            Tone.Transport.start()
+        } else if (pianoButtons[1].classList.contains('active')) {
+            Tone.Transport.start()
+        }
+        else {
+            console.log("error");
+        }
+
+    }
+}
 
 
 refreshButton.addEventListener("click", () => {
@@ -69,11 +100,21 @@ refreshButton.addEventListener("click", () => {
     }
 })
 
-
+function addTones(){
 for (let i = 0; i < pianoButtons.length; i++) {
     pianoButtons[i].addEventListener("click", () => {
         pianoButtons[i].classList.toggle("active");
         console.log("tone", [i]);
+
+        for (let i = 0; i < pianoButtons.length; i++) {
+            if (pianoButtons[i].classList.contains('active')) {
+                playButton.classList.add("activePlay");
+                console.log("playyyy", playButton);
+                break;
+            } else {
+                playButton.classList.remove("activePlay");
+            }
+        }
 
         if (pianoButtons[i] == pianoButtons[1]) {
             tones[1].classList.toggle("tone");
@@ -88,12 +129,54 @@ for (let i = 0; i < pianoButtons.length; i++) {
         else {
             tones[i].classList.toggle("tone");
         }
+
+        if (pianoButtons[i] == pianoButtons[0]) {
+            //   synth.triggerAttackRelease('C4', '8n');
+            const synthA = new Tone.FMSynth().toDestination();
+
+            const loopA = new Tone.Loop(time => {
+                synthA.triggerAttackRelease("C2", "8n", time);
+            }, "2n").start(0);
+            console.log("yeees");
+        } else if (pianoButtons[i] == pianoButtons[1]) {
+            //   synth.triggerAttackRelease('D4', '8n');
+
+            const synthA = new Tone.FMSynth().toDestination();
+
+            const loopA = new Tone.Loop(time => {
+                synthA.triggerAttackRelease("D4", "8n", time);
+            }, "2n").start(0);
+        } else if (pianoButtons[i] == pianoButtons[2]) {
+            synth.triggerAttackRelease('E4', '8n');
+        } else if (pianoButtons[i] == pianoButtons[3]) {
+            synth.triggerAttackRelease('F4', '8n');
+        } else if (pianoButtons[i] == pianoButtons[4]) {
+            synth.triggerAttackRelease('G4', '8n');
+        } else if (pianoButtons[i] == pianoButtons[5]) {
+            synth.triggerAttackRelease('A4', '8n');
+        } else if (pianoButtons[i] == pianoButtons[6]) {
+            synth.triggerAttackRelease('B4', '8n');
+        } else if (pianoButtons[i] == pianoButtons[7]) {
+            synth.triggerAttackRelease('C5', '8n');
+        } else if (pianoButtons[i] == pianoButtons[8]) {
+            synth.triggerAttackRelease('D5', '8n');
+        }
     })
 }
+}
 
-for (let i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener("click", () => {
+addTones();
+
+function deletePiano() {
+    console.log("delete");
+    for (let i = 0; i < deleteButtons.length; i++) {
         console.log("delete");
         deleteButtons[i].parentNode.remove();
-    })
+        console.log(deleteButtons.length);
+    }
+}
+
+
+for (let i = 0; i < deleteButtons.length; i++) {
+deleteButtons[i].addEventListener("click", deletePiano);
 }
