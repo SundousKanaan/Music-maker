@@ -104,7 +104,6 @@ He was confused at first because the tone symbols didn't match the buttons like 
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 - [ejs](https://ejs.co/)
 - [Service Worker](https://googlechrome.github.io/samples/service-worker/basic/)
-- [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading)
 
 
 ---
