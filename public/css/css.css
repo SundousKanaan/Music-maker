@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    caret-color: transparent;
 }
 
 html {
@@ -40,7 +41,7 @@ html {
 
     --footer-bg: #fddaec;
 }
-/* 
+
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: #d6d6d6;
@@ -72,7 +73,7 @@ html {
     
         --footer-bg: #8f1d69;
     }
-} */
+}
 
 
 :focus {
@@ -697,8 +698,21 @@ main ul.list li p{
 
 
 @media (min-width: 992px) {
+
     main ul li:nth-child(2).addPiano {
         margin:0;
+    }
+
+    main > button{
+        width: 5.5vw;
+    }
+
+    main>button:first-of-type{
+        right: 30vw;
+    }
+
+    main>button:last-of-type{
+        left: 30vw;
     }
 }
 

@@ -119,6 +119,10 @@ for (let i = 0; i < pianoButtons.length; i++) {
 
                 pianoButtons[i].synth = synthA;
                 pianoButtons[i].loop = loopA;
+                
+                if (!pauseButton.classList.contains('activePlay')) {
+                    pauseButton.classList.add("activePlay")
+                }
 
             } else {
                 pianoButtons[i].synth.triggerRelease();
