@@ -12,7 +12,7 @@
             navigator.serviceWorker.register('/serviceWorker.js')
               .then((registration) => {
                 // Als de registratie succesvol is, log dan het bereik van de servicewerker in de console
-                console.log('ServiceWorker registration successful with scope: ', registration);
+                console.log('ServiceWorker registration successful');
                 // Forceer een update van de servicewerker
                 return registration.update();
               })

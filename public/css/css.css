@@ -27,20 +27,11 @@ html {
     --piano-button: white;
     --piano-button-shadow: rgb(212, 212, 212);
 
-    /* --piano-dark-button:#decbe4;
-    --piano-dark-button-shadow:#c0a2c9; */
-
     --piano-dark-button: #fbb4ae;
     --piano-dark-button-shadow: #fa978e;
 
-    /* --piano-button-hover:#fbb4ae;
-    --piano-button-shadow-hover:#fa978e; */
-
     --piano-button-hover: #decbe4;
     --piano-button-shadow-hover: #c0a2c9;
-
-    /* --piano-button-active:#b3cde3;
-    --piano-button-shadow-active:#062844; */
 
     --controls-bg: var(--tone-bg);
     --controls-bg-gradient: linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
@@ -394,8 +385,10 @@ main>section:first-of-type button:last-of-type {
     background-image: url(../images/refresh-sign.svg);
 }
 
+main>section button:focus,
 main>section:first-of-type button:hover {
     transform: scale(1.1) rotate(360deg);
+    background-color: var(--tone-bg);
 }
 
 main>section:first-of-type button:active {
@@ -434,9 +427,9 @@ main>button {
     transition: .5s;
 }
 
+main>button:focus,
 main>button:hover {
     transform: scale(1.1) rotate(360deg);
-    background-color: var(--controls-button-bg);
     border: solid .3em var(--controls-button-border);
 }
 
@@ -517,6 +510,7 @@ main ul li>button {
     transition: .5s;
 }
 
+main ul li>button:focus,
 main ul li>button:hover {
     background-color: var(--piano-button-hover);
     background-size: 80%;
@@ -701,6 +695,6 @@ footer {
 
 footer p {
     width: fit-content;
-    font-size: 1.5vw;
+    /* font-size: 1.5em; */
 
 }
