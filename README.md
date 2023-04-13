@@ -33,9 +33,19 @@ A front-end for a musical instrument that generates music visualizations based o
 
 ## My work
 
+Sketch ideas
+
+<img src="/readme/schets.jpg" alt="schets ideeen">
+
+
 I've built a site that allows the user to play with notes using a simple piano pad. With two piano boards, one for chords and the other for solo notes, the user has the ability to choose what they want to play.
 
 <img src="/readme/piano-v2.png" alt="screen shot of my website">
+
+
+## test
+
+[![Test video 1](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/cXxiZfbg25k)
 
 
 
@@ -55,9 +65,6 @@ I've built a site that allows the user to play with notes using a simple piano p
 - [code pen 5](https://codepen.io/philipnrmn/pen/gGwZKb)
 - [code pen 6](https://codepen.io/UXauthority/pen/NNzvZM)
 
-## schets ideeen
-
-<img src="/readme/schets.jpg" alt="schets ideeen">
 
 ## last checklist and features
 
