@@ -47,6 +47,8 @@ I've built a site that allows the user to play with notes using a simple piano p
 
 [![Test video 1](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/cXxiZfbg25k)
 
+[![Test video 2](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/Qp_TCf7uayI)
+
 
 
 <!-- Maybe a table of contents here? 📚 -->
