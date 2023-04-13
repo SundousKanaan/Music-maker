@@ -33,11 +33,11 @@ A front-end for a musical instrument that generates music visualizations based o
 
 ## My work
 
-Sketch ideas
+**Sketch ideas**
 
 <img src="/readme/schets.jpg" alt="schets ideeen">
 
-
+**The end result**
 I've built a site that allows the user to play with notes using a simple piano pad. With two piano boards, one for chords and the other for solo notes, the user has the ability to choose what they want to play.
 
 <img src="/readme/piano-v2.png" alt="screen shot of my website">
