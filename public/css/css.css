@@ -10,53 +10,53 @@ html {
     scroll-behavior: smooth;
 }
 
-:root{
-    --body-bg:#ffffe7;
+:root {
+    --body-bg: #ffffe7;
 
-    --header-bg:#f2f2f2;
+    --header-bg: #f2f2f2;
     --tone-bg: #fbb4ae;
     --tone-bg-shadow: #b8d7f0;
-    --button-width:4em;
+    --button-width: 4em;
 
-    --li-bg:rgb(200, 255, 250);
+    --li-bg: rgb(200, 255, 250);
 
     --piano-bg: #fddaec;
     --piano-shadow: #f7b0d4;
-    --piano-button:white;
-    --piano-button-shadow:rgb(212, 212, 212);
+    --piano-button: white;
+    --piano-button-shadow: rgb(212, 212, 212);
 
     /* --piano-dark-button:#decbe4;
     --piano-dark-button-shadow:#c0a2c9; */
 
-    --piano-dark-button:#fbb4ae;
-    --piano-dark-button-shadow:#fa978e;
+    --piano-dark-button: #fbb4ae;
+    --piano-dark-button-shadow: #fa978e;
 
     /* --piano-button-hover:#fbb4ae;
     --piano-button-shadow-hover:#fa978e; */
-    
-    --piano-button-hover:#decbe4;
-    --piano-button-shadow-hover:#c0a2c9;
+
+    --piano-button-hover: #decbe4;
+    --piano-button-shadow-hover: #c0a2c9;
 
     /* --piano-button-active:#b3cde3;
     --piano-button-shadow-active:#062844; */
 
     --controls-bg: var(--tone-bg);
-    --controls-bg-gradient:linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
+    --controls-bg-gradient: linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
     --controls-button-bg: #b3cde3;
     --controls-button-border: #7ca0be;
 
     --footer-bg: #fddaec;
 }
 
-:focus{
+:focus {
     outline: transparent;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
 
@@ -74,12 +74,10 @@ body{
 /* *********** */
 /*    header   */
 /* *********** */
-header{
+header {
     width: 100%;
     height: 13em;
     background-color: var(--header-bg);
-
-    /* padding: 1em 2em 0 1em; */
 
     padding: 1em 1em 0 1em;
 
@@ -90,7 +88,7 @@ header{
     display: flex;
 }
 
-header ul{
+header ul {
     width: 100%;
     height: 100%;
 
@@ -99,7 +97,7 @@ header ul{
     gap: 1%;
 }
 
-header ul li{
+header ul li {
     display: block;
     width: calc(100%/20);
     height: 100%;
@@ -109,85 +107,174 @@ header ul li{
     transform-origin: bottom;
     transform: scaleY(0);
 
-    border-radius: 50% 50% 0% 0% / 10% 10% 0% 0% ;
+    border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
 
     /* animation: music 1s infinite linear both; */
 }
 
-header ul li:nth-child(3),
-header ul li:nth-child(8),
-header ul li:nth-child(14){
+header ul:first-of-type li:nth-child(3),
+header ul:first-of-type li:nth-child(8),
+header ul:first-of-type li:nth-child(14),
+header ul:nth-of-type(2) li:nth-child(3),
+header ul:nth-of-type(2) li:nth-child(8),
+header ul:nth-of-type(2) li:nth-child(14) {
     height: 70%;
 }
 
-header ul li:nth-child(1),
-header ul li:nth-child(12),
-header ul li:nth-child(18){
+header ul:first-of-type li:nth-child(1),
+header ul:first-of-type li:nth-child(12),
+header ul:first-of-type li:nth-child(18),
+header ul:nth-of-type(2) li:nth-child(1),
+header ul:nth-of-type(2) li:nth-child(12),
+header ul:nth-of-type(2) li:nth-child(18) {
     height: 30%;
 }
 
-header ul li:nth-child(3),
-header ul li:nth-child(6),
-header ul li:nth-child(10),
-header ul li:nth-child(16){
+header ul:first-of-type li:nth-child(6),
+header ul:first-of-type li:nth-child(10),
+header ul:first-of-type li:nth-child(16),
+header ul:nth-of-type(2) li:nth-child(6),
+header ul:nth-of-type(2) li:nth-child(10),
+header ul:nth-of-type(2) li:nth-child(16) {
     height: 50%;
 }
 
-.playTone{
+.playTone {
     animation-iteration-count: infinite;
 }
 
-header ul:first-of-type li.pause{
+header ul:first-of-type li.pause {
     animation: music 1s linear infinite both;
     animation-play-state: paused;
 }
 
 /* header ul.playTone li.tone */
-header ul:first-of-type li.tone{
+header ul:first-of-type li.tone {
     animation: music 1s linear infinite both;
     animation-play-state: running;
 }
 
 @keyframes music {
-    0%{
+    0% {
         transform: scaleY(0);
     }
-    50%{
+
+    50% {
         transform: scaleY(1);
     }
-    100%{
+
+    100% {
         transform: scaleY(0);
     }
 }
 
-header ul:last-of-type li.tone{
+header ul:nth-of-type(2) li.tone {
     animation: music2 .5s linear 1 both;
 }
 
 @keyframes music2 {
-    0%{
+    0% {
         transform: scaleY(0);
     }
-    50%{
+
+    50% {
         transform: scaleY(1);
     }
-    100%{
+
+    100% {
         transform: scaleY(0);
     }
 }
+
+
+header ul:last-of-type {
+    width: 95%;
+    position: absolute;
+    z-index: -1;
+}
+
+header ul:last-of-type li {
+    transform: scale(1);
+
+    opacity: 30%;
+    /* background: darkorchid; */
+
+    --daley: .2s;
+    --duration: 1s;
+    animation: music3 var(--duration) var(--daley) linear infinite both alternate;
+}
+
+header ul:last-of-type li:first-of-type,
+header ul:last-of-type li:last-of-type {
+    height: 70%;
+}
+
+
+header ul:last-of-type li:nth-child(2n+2) {
+    --daley: -1s;
+    /* background: red; */
+}
+
+ header ul:last-of-type li:nth-child(4n+3) {
+    --daley: -.5s;
+    /* background: green; */
+
+    animation-direction: alternate-reverse;
+} 
+
+@keyframes music3 {
+    0% {
+        transform: scaleY(.3);
+    }
+
+    30% {
+        transform: scaleY(.8);
+    }
+
+    60% {
+        transform: scaleY(.5);
+    }
+
+    100% {
+        transform: scaleY(.7);
+    }
+}
+
+
+@media (min-width: 992px) {
+    header ul:first-of-type {
+        padding-left: 10%;
+    }
+
+    header ul:nth-of-type(2) {
+        padding-right: 10%;
+    }
+
+    header ul:nth-of-type(3) {
+        padding: 0 9.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
 /* *********** */
 /*     main    */
 /* *********** */
-main{
+main {
     width: 100%;
     height: calc(100vh - 16em);
 
     display: flex;
     flex-direction: column;
-    /* gap: 1em; */
 }
 
 
@@ -201,7 +288,7 @@ main{
 /*   controls  */
 /* *********** */
 
-main > section:first-of-type{
+main>section:first-of-type {
     width: 100%;
     height: 4em;
     background-color: var(--controls-bg);
@@ -218,7 +305,7 @@ main > section:first-of-type{
 
 }
 
-main > section:first-of-type button{
+main>section:first-of-type button {
     appearance: none;
     -webkit-appearance: none;
 
@@ -235,14 +322,14 @@ main > section:first-of-type button{
     transition: .3s;
 }
 
-main > section:first-of-type button:first-of-type {
+main>section:first-of-type button:first-of-type {
     background-image: url(../images/play-sign.svg);
     background-size: 50%;
     visibility: hidden;
 }
 
-main > section:first-of-type button:first-of-type.activePlay,
-main > section:first-of-type button:nth-of-type(2).activePlay{
+main>section:first-of-type button:first-of-type.activePlay,
+main>section:first-of-type button:nth-of-type(2).activePlay {
     visibility: visible;
 }
 
@@ -250,21 +337,21 @@ main > section:first-of-type button:nth-of-type(2).activePlay{
     background-color: var(--piano-dark-button);
 } */
 
-main > section:first-of-type button:nth-of-type(2){
+main>section:first-of-type button:nth-of-type(2) {
     background-image: url(../images/pause-sign.svg);
     background-size: 45%;
     visibility: hidden;
 }
 
-main > section:first-of-type button:last-of-type{
+main>section:first-of-type button:last-of-type {
     background-image: url(../images/refresh-sign.svg);
 }
 
-main > section:first-of-type button:hover{
+main>section:first-of-type button:hover {
     transform: scale(1.1) rotate(360deg);
 }
 
-main > section:first-of-type button:active{
+main>section:first-of-type button:active {
     transform: scale(.9);
 }
 
@@ -274,7 +361,7 @@ main > section:first-of-type button:active{
 /* plus button */
 /* *********** */
 
-main > button{
+main>button {
     appearance: none;
     -webkit-appearance: none;
 
@@ -300,17 +387,17 @@ main > button{
     transition: .5s;
 }
 
-main > button:hover{
+main>button:hover {
     transform: scale(1.1) rotate(360deg);
     background-color: var(--controls-button-bg);
     border: solid .3em var(--controls-button-border);
 }
 
-main > button:active{
+main>button:active {
     transform: scale(.9);
 }
 
-main > button.hidden{
+main>button.hidden {
     visibility: hidden;
 }
 
@@ -322,7 +409,7 @@ main > button.hidden{
 /*  piano's  */
 /* ********* */
 
-main ul{
+main ul {
     width: 100vw;
     height: 100%;
 
@@ -332,12 +419,12 @@ main ul{
     flex-wrap: wrap;
 }
 
-main ul li{
+main ul li {
     width: 35em;
     height: 15em;
     background-color: var(--piano-bg);
     box-shadow: 0 .5em var(--piano-shadow);
-    border-radius: 5% 5% 9% 9% / 10% 10% 20% 20% ;
+    border-radius: 5% 5% 9% 9% / 10% 10% 20% 20%;
 
     position: relative;
 
@@ -350,7 +437,7 @@ main ul li{
     align-items: center;
 }
 
-main ul li p{
+main ul li p {
     width: 100%;
     height: 100%;
 
@@ -361,7 +448,7 @@ main ul li p{
     align-items: center;
 }
 
-main ul li > button{
+main ul li>button {
     grid-area: 1/1/2/2;
     justify-self: end;
 
@@ -383,19 +470,19 @@ main ul li > button{
     transition: .5s;
 }
 
-main ul li > button:hover{
+main ul li>button:hover {
     background-color: var(--piano-button-hover);
     background-size: 80%;
     transform: rotate(360deg) scale(1.2);
     border: solid .3em var(--piano-button-shadow-hover);
 }
 
-main ul li > button:active{
+main ul li>button:active {
     transform: scale(.7);
 }
 
-main ul li > div:first-of-type,
-main ul li >div:last-of-type{
+main ul li>div:first-of-type,
+main ul li>div:last-of-type {
     width: 100%;
     height: 100%;
 
@@ -407,7 +494,7 @@ main ul li >div:last-of-type{
 }
 
 
-main ul li > div:last-of-type{
+main ul li>div:last-of-type {
     justify-self: center;
     width: 82%;
     height: 60%;
@@ -421,7 +508,7 @@ main ul li > div:last-of-type{
     top: -.5em;
 }
 
-main ul li > div button{
+main ul li>div button {
     appearance: none;
     -webkit-appearance: none;
 
@@ -440,13 +527,13 @@ main ul li > div button{
 
 }
 
-main ul li > div:first-of-type button{
+main ul li>div:first-of-type button {
     width: 3.8em;
     box-shadow: inset 0em -.5em var(--piano-button-shadow);
     border-radius: 25% 25% 50% 50% / 10% 10% 15% 15%;
 }
 
-main ul li > div:last-of-type button{
+main ul li>div:last-of-type button {
     width: 3em;
 
     background-color: var(--piano-dark-button);
@@ -455,13 +542,13 @@ main ul li > div:last-of-type button{
     border-radius: 25% 25% 50% 50% / 10% 10% 20% 20%;
 }
 
-main ul li > div:last-of-type button:nth-of-type(3),
-main ul li > div:last-of-type button:nth-of-type(7){
+main ul li>div:last-of-type button:nth-of-type(3),
+main ul li>div:last-of-type button:nth-of-type(7) {
     visibility: hidden;
 }
 
 main ul li div button:focus-visible,
-main ul li div button:hover{
+main ul li div button:hover {
     outline: transparent;
     border: none;
     background-color: var(--piano-button-hover);
@@ -469,24 +556,26 @@ main ul li div button:hover{
     z-index: 1;
 }
 
-main ul li div button:active{
+main ul li div button:active {
     transform: scaleY(.9);
 }
 
-.active{
-    --piano-button:#b3cde3;
-    --piano-button-shadow:#7ca0be;
+.active {
+    --piano-button: #b3cde3;
+    --piano-button-shadow: #7ca0be;
 
-    --piano-dark-button:#b3cde3;
-    --piano-dark-button-shadow:#7ca0be;
+    --piano-dark-button: #b3cde3;
+    --piano-dark-button-shadow: #7ca0be;
 }
 
-main ul li:nth-child(2){
+main ul li:nth-child(2) {
     display: none;
 }
 
-main ul li:nth-child(2).addPiano{
+main ul li:nth-child(2).addPiano {
     display: grid;
+
+    margin-bottom: 2em;
 }
 
 
@@ -501,7 +590,7 @@ main ul li:nth-child(2).addPiano{
 /*    footer   */
 /* *********** */
 
-footer{
+footer {
     width: 100%;
     height: 3em;
     background-color: var(--footer-bg);
@@ -514,6 +603,6 @@ footer{
     align-items: center;
 }
 
-footer p{
+footer p {
     width: fit-content;
 }

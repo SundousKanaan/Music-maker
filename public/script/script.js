@@ -22,8 +22,8 @@ let playButton = document.querySelector("main > section:first-of-type button:fir
 let pauseButton = document.querySelector("main > section:first-of-type button:nth-of-type(2)")
 let refreshButton = document.querySelector("main > section:first-of-type button:last-of-type")
 
-let tonesList = document.querySelector("header ul")
-let tones = document.querySelectorAll("header ul li")
+let tonesList = document.querySelector("header ul:first-of-type , header ul:nth-of-type(2) ")
+let tones = document.querySelectorAll("header ul:first-of-type li, header ul:nth-of-type(2) li")
 let pianoButtons = document.querySelectorAll("main ul li > div button")
 
 playButton.addEventListener("click", () => {
