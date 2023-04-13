@@ -4,6 +4,8 @@ const cacheAssests = [
     '/offline',
     '/css/css.css',
     '/script/script.js',
+    '/manifest.json',
+    '/images/icons/app-icon-72x72.png',
     '/images/delete-sign.svg',
     '/images/pause-sign.svg',
     '/images/play-sign.svg',
