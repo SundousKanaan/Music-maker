@@ -44,6 +44,11 @@ I've built a site that allows the user to play with notes using a simple piano p
 
 <img src="/readme/piano-v2-2.png" alt="screen shot of my website">
 
+**Dark mode**
+
+The dark mode can be active with the mode button or the device mode
+
+<img src="/readme/piano-v2-darkmode.png" alt="screen shot of my website">
 
 
 
