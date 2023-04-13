@@ -40,8 +40,8 @@ html {
 
     --footer-bg: #fddaec;
 }
-
-@media (prefers-color-scheme: light) {
+/* 
+@media (prefers-color-scheme: dark) {
     :root {
         --text-color: #d6d6d6;
 
@@ -72,7 +72,7 @@ html {
     
         --footer-bg: #8f1d69;
     }
-}
+} */
 
 
 :focus {
@@ -99,7 +99,36 @@ body {
     /* padding-right: 1em; */
 }
 
+body.dark{
+    --text-color: #d6d6d6;
 
+    --body-bg: #949494;
+
+    --header-bg: #313131;
+    --tone-bg: #8f1d69;
+    --tone-bg-shadow: #8e00e0;
+    --button-width: 4em;
+
+    --li-bg: rgb(200, 255, 250);
+
+    --piano-bg: #313131;
+    --piano-shadow: #5c5c5c;
+    --piano-button: white;
+    --piano-button-shadow: rgb(212, 212, 212);
+
+    --piano-dark-button: #8f1d69;
+    --piano-dark-button-shadow: #a3367f;
+
+    --piano-button-hover: #decbe4;
+    --piano-button-shadow-hover: #c0a2c9;
+
+    --controls-bg: var(--tone-bg);
+    --controls-bg-gradient: linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
+    --controls-button-bg: #decbe4;
+    --controls-button-border: #c0a2c9;
+
+    --footer-bg: #8f1d69;
+}
 
 
 
@@ -410,7 +439,6 @@ main>button {
 
     position: fixed;
     bottom: 5.5em;
-    right: 3vw;
     z-index: 100000;
 
     border: none;
@@ -425,6 +453,16 @@ main>button {
     box-shadow: 0 0 .5em var(--controls-button-border);
 
     transition: .5s;
+}
+
+main>button:first-of-type{
+    background-image: url(../images/plus-sign.svg);
+    right: 3vw;
+}
+
+main>button:last-of-type{
+    background-image: url(../images/darkandlight.svg);
+    left: 3vw;
 }
 
 main>button:focus,
@@ -609,7 +647,7 @@ main ul li div button:active {
     --piano-dark-button-shadow: #7ca0be;
 }
 
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: dark){
     .active {
         --piano-button: #8e02b1;
         --piano-button-shadow: #b300e0;

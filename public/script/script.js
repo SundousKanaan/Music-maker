@@ -1,7 +1,6 @@
-// const { log } = require("tone/build/esm/core/util/Debug");
 
 // let pianoList = document.querySelector("main > ul:first-of-type")
-let plusButton = document.querySelector("main > button")
+let plusButton = document.querySelector("main > button:first-of-type")
 let deleteButton = document.querySelector("main ul li:nth-child(2) > button")
 
 
@@ -13,6 +12,12 @@ plusButton.addEventListener("click", () => {
 deleteButton.addEventListener("click", () => {
     deleteButton.parentNode.classList.remove("addPiano")
     plusButton.classList.remove("hidden")
+})
+
+let modeButton = document.querySelector("main > button:last-of-type")
+modeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark")
+    console.log("ddd");
 })
 
 // ********************************************
