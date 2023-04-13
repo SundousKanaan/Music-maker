@@ -578,6 +578,18 @@ main ul li:nth-child(2).addPiano {
     margin-bottom: 7vh;
 }
 
+@media (min-width: 992px) {
+    main ul li:nth-child(2).addPiano {
+        margin:0;
+    }
+}
+
+@media (min-width: 1660px) {
+    main ul li{
+        transform: scale(1.3);
+    }
+}
+
 
 
 
