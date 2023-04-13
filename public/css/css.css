@@ -94,7 +94,7 @@ button {
 
 p{
     color: var(--text-color);
-    font-size: 2.5vw;
+    font-size: 1.5em;
 }
 
 
@@ -107,6 +107,10 @@ body {
     overflow-x: hidden;
     /* padding-right: 1em; */
 }
+
+
+
+
 
 
 
@@ -296,6 +300,8 @@ header ul:last-of-type li:nth-child(2n+2) {
         padding: 0 9.5%;
     }
 }
+
+
 
 
 
@@ -609,7 +615,7 @@ main ul li div button:active {
     --piano-dark-button-shadow: #7ca0be;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
     .active {
         --piano-button: #8e02b1;
         --piano-button-shadow: #b300e0;
@@ -618,6 +624,7 @@ main ul li div button:active {
         --piano-dark-button-shadow: #b300e0;
     }
 }
+
 main ul li:nth-child(2) {
     display: none;
 }
@@ -694,6 +701,6 @@ footer {
 
 footer p {
     width: fit-content;
-    font-size: 2vw;
+    font-size: 1.5vw;
 
 }
