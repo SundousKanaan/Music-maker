@@ -45,9 +45,9 @@ I've built a site that allows the user to play with notes using a simple piano p
 
 ## test
 
-[![Test video 1](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/cXxiZfbg25k)
+[![Test video 1](https://github.com/SundousKanaan/Music-maker/blob/580f17d543e27bcc602dd0dbd07f4acad07e9478/readme/test1.png)](https://youtu.be/cXxiZfbg25k)
 
-[![Test video 2](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/Qp_TCf7uayI)
+[![Test video 2](https://github.com/SundousKanaan/Music-maker/blob/580f17d543e27bcc602dd0dbd07f4acad07e9478/readme/test2.png)](https://youtu.be/Qp_TCf7uayI)
 
 
 
