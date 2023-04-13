@@ -10,7 +10,8 @@ const cacheAssests = [
     '/images/pause-sign.svg',
     '/images/play-sign.svg',
     '/images/plus-sign.svg',
-    '/images/refresh-sign.svg'
+    '/images/refresh-sign.svg',
+    '/images/darkandlight.svg'
 ]
 
 // Call install event

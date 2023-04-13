@@ -82,21 +82,31 @@ async function audioCheck() {
             console.log( i,"true");
             Tone.Transport.start()
             break;
-        }
-        else {
+        } else {
             console.log("not selected");
             Tone.Transport.stop()
         }
     }
+
+    if (playButton.classList.contains('activePlay')) {
+        Tone.Transport.start()
+        playButton.classList.remove('activePlay');
+
+        for (let i = 0; i < tones.length; i++) {
+            if (tones[i].classList.contains('pause')) {
+                tones[i].classList.remove("pause");
+                tones[i].classList.add("tone");
+            }
+        }
+    }
 }
 
-
 let array = [
-    "Bb6","D4","Db4","E4","Eb4","F4","G4","Gb4","A4","Ab4",
-    "B4","Bb4","Bb4","C5","F#4","D#4","D#4","F#2", "C4",
+    "C6","D4","E4","F4","G4","A4","B4","C5","Db4","Db4",
+    "Eb4","F#4","Gb4","Gb4","Ab4","Ab4","Bb6","Bb6","C#4",
 
-    "Bb6","D4","Db4","E4","Eb4","F4","G4","Gb4","A4","Ab4",
-    "B4","Bb4","Bb4","C5","F#4","D#4","D#4","F#2", "C4"
+    "C6","D4","E4","F4","G4","A4","B4","C5","Db4","Db4",
+    "Eb4","F#4","Gb4","Gb4","Ab4","Ab4","Bb6","Bb6","C#4"
 ]
 
 for (let i = 0; i < pianoButtons.length; i++){
@@ -121,7 +131,8 @@ for (let i = 0; i < pianoButtons.length; i++) {
                 pianoButtons[i].loop = loopA;
                 
                 if (!pauseButton.classList.contains('activePlay')) {
-                    pauseButton.classList.add("activePlay")
+                    pauseButton.classList.add('activePlay')
+                    // Tone.Transport.start()
                 }
 
             } else {

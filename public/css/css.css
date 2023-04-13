@@ -406,10 +406,6 @@ main>section:first-of-type button:nth-of-type(2).activePlay {
     visibility: visible;
 }
 
-/* main > section:first-of-type button:first-of-type.play{
-    background-color: var(--piano-dark-button);
-} */
-
 main>section:first-of-type button:nth-of-type(2) {
     background-image: url(../images/pause-sign.svg);
     background-size: 45%;
