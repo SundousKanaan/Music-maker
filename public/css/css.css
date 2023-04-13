@@ -16,6 +16,8 @@ html {
 
     --body-bg: #ffffe7;
 
+    --samll-note-bg: var(--header-bg);
+
     --header-bg: #f2f2f2;
     --tone-bg: #fbb4ae;
     --tone-bg-shadow: #b8d7f0;
@@ -48,6 +50,8 @@ html {
 
         --body-bg: #949494;
     
+        --samll-note-bg: #353535;
+
         --header-bg: #313131;
         --tone-bg: #8f1d69;
         --tone-bg-shadow: #8e00e0;
@@ -72,6 +76,10 @@ html {
         --controls-button-border: #c0a2c9;
     
         --footer-bg: #8f1d69;
+    }
+
+    main>button:last-of-type{
+        display: none;
     }
 }
 
@@ -102,9 +110,11 @@ body {
 }
 
 body.dark{
-    --text-color: #d6d6d6;
+    --text-color: #929292;
 
     --body-bg: #949494;
+
+    --samll-note-bg: #353535;
 
     --header-bg: #313131;
     --tone-bg: #8f1d69;
@@ -156,12 +166,6 @@ header {
     display: flex;
 }
 
-@media (min-width: 992px){
-    header {
-        height: 10em;
-    }
-}
-
 header ul {
     width: 100%;
     height: 100%;
@@ -182,8 +186,6 @@ header ul li {
     transform: scaleY(0);
 
     border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
-
-    /* animation: music 1s infinite linear both; */
 }
 
 header ul:first-of-type li:nth-child(3),
@@ -495,6 +497,10 @@ main>button.hidden {
 
 
 
+
+
+
+
 /*  piano's  */
 /* ********* */
 
@@ -691,6 +697,10 @@ main ul li:nth-child(2).addPiano {
 }
 
 
+
+
+
+
 /* small screen */
 main ul.list{
     display: none;
@@ -701,7 +711,7 @@ main ul.list li{
 }
 
 main ul.list li p{
-    background-color: var(--piano-button);
+    background-color: var(--samll-note-bg);
     grid-area:1/1/3/2;
     border-radius: 5% 5% 9% 9% / 10% 10% 20% 20%;
 }
@@ -726,7 +736,7 @@ main ul.list li p{
     }
 
     main > button{
-        width: 5.5vw;
+        width: 5vw;
     }
 
     main>button:first-of-type{
