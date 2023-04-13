@@ -82,6 +82,7 @@ html {
 
 button {
     cursor: pointer;
+    font-family: 'Caveat', cursive;
 }
 
 p{
@@ -621,6 +622,10 @@ main ul li>div:last-of-type button {
     box-shadow: inset 0 -.5em var(--piano-dark-button-shadow);
 
     border-radius: 25% 25% 50% 50% / 10% 10% 20% 20%;
+}
+
+body main ul li>div:last-of-type button{
+    color: var(--text-color);
 }
 
 main ul li>div:last-of-type button:nth-of-type(3),

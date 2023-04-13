@@ -103,10 +103,10 @@ async function audioCheck() {
 
 let array = [
     "C6","D4","E4","F4","G4","A4","B4","C5","Db4","Db4",
-    "Eb4","F#4","Gb4","Gb4","Ab4","Ab4","Bb6","Bb6","C#4",
+    "C#4","D#2","D#2","Eb4","F#4","Gb4","Gb4","Ab4","Bb6",
 
     "C6","D4","E4","F4","G4","A4","B4","C5","Db4","Db4",
-    "Eb4","F#4","Gb4","Gb4","Ab4","Ab4","Bb6","Bb6","C#4"
+    "C#4","D#2","D#2","Eb4","F#4","Gb4","Gb4","Ab4","Bb6"
 ]
 
 for (let i = 0; i < pianoButtons.length; i++){
