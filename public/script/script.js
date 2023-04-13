@@ -14,8 +14,6 @@ deleteButton.addEventListener("click", () => {
     plusButton.classList.remove("hidden")
 })
 
-
-
 // ********************************************
 // ********************************************
 const synth = new Tone.Synth().toDestination();
@@ -333,3 +331,11 @@ for (let i = 0; i < pianoButtons.length; i++) {
     })
 }
 
+
+
+
+const noContext = document.querySelector("body");
+
+noContext.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+});
