@@ -23,19 +23,21 @@ Code techniques:
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 ## live demo
-[the live music maker](https://music-maker-production.up.railway.app/)
+[Music maker](https://music-maker-production.up.railway.app/)
 
-### Opdracht 2: AI muziekinstrument
+## Assignment: AI musical instrument
 
-Een front-end voor een muziekinstrumenten die op basis van data muziekvisualisaties genereren. Je wil de gebruiker de kans geven om het eindresultaat aan te passen. "Dingen" als DALL-E en Midjourney hebben een vrij lineare output, namelijk een input en een output. Tijdens dit project wil een gebruiker met meerdere momenten van input de output "sturen" als het ware.
-
-
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+A front-end for a musical instrument that generates music visualizations based on data. You want to give the user the opportunity to customize the end result. "Things" like DALL-E and Midjourney have a fairly linear output, namely an input and an output. During this project, a user wants to "steer" the output with multiple moments of input.
 
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+
+## My work
+
+I've built a site that allows the user to play with notes using a simple piano pad. With two piano boards, one for chords and the other for solo notes, the user has the ability to choose what they want to play.
+
+<img src="/readme/piano-v2.png" alt="screen shot of my website">
+
+
 
 <!-- Maybe a table of contents here? 📚 -->
 
@@ -43,9 +45,6 @@ Een front-end voor een muziekinstrumenten die op basis van data muziekvisualisat
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 
 ## inspiratie:
 
@@ -60,8 +59,28 @@ Een front-end voor een muziekinstrumenten die op basis van data muziekvisualisat
 
 <img src="/readme/schets.jpg" alt="schets ideeen">
 
+## last checklist and features
+
+- Responsive ✅
+- Work with the big touch screens ✅
+- Dark & light mode ✅
+- Node js ✅
+- PWA App ✅
+- Service Worker ✅
+- Offline ✅
+- Downloadable ✅
+- The piano works with keyboard (tab/speac/enter) ✅
+- The piano works with letters from the keyboard ❌
+- work good on Chrome, Firefox and Samsung Internet ✅
+
+## Sources
+- [icons](https://www.svgrepo.com/svg/509392/refresh)
+- [How HTTP POST request work in Node.js?](https://www.geeksforgeeks.org/how-http-post-request-work-in-node-js/)
+- [node-fetch](https://www.npmjs.com/package/node-fetch)
+- [ejs](https://ejs.co/)
+- [Service Worker](https://googlechrome.github.io/samples/service-worker/basic/)
+- [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading)
 
 
-## bronen
-
-[icons](https://www.svgrepo.com/svg/509392/refresh)
+---
+### I did this project for my third year school project.
