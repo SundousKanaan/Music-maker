@@ -330,9 +330,6 @@ main ul{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    /* gap: 2em; */
-
-    /* background-color: red; */
 }
 
 main ul li{
@@ -352,10 +349,6 @@ main ul li{
     grid-template-rows: 4em 1fr;
     align-items: center;
 }
-
-/* main ul li:last-child{
-    margin-bottom: 10em;
-} */
 
 main ul li p{
     width: 100%;
