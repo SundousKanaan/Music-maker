@@ -66,6 +66,8 @@ He was confused at first because the tone symbols didn't match the buttons like 
 [![Test video 2](https://github.com/SundousKanaan/Music-maker/blob/580f17d543e27bcc602dd0dbd07f4acad07e9478/readme/test2.png)](https://youtu.be/Qp_TCf7uayI)
 
 
+**I fixed the button labels, but I wasn't able to get them to exactly match a real piano because the tone.js library lacks an array showing what notes it contains or a separate text file containing this information so the workability for me was limited.**
+
 
 <!-- Maybe a table of contents here? 📚 -->
 
