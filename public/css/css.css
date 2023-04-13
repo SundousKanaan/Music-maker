@@ -370,14 +370,19 @@ main>section:first-of-type {
     align-items: center;
 
     padding: 0 20%;
+}
 
+@media (min-width: 992px) {
+    main>section:first-of-type {
+        height: 5.5em;
+    }
 }
 
 main>section:first-of-type button {
     appearance: none;
     -webkit-appearance: none;
 
-    width: 3.5em;
+    height: 70%;
     aspect-ratio: 1/1;
 
     border: solid .3em var(--controls-button-border);
@@ -656,6 +661,14 @@ main ul li div button:active {
         --piano-dark-button: #8e02b1;
         --piano-dark-button-shadow: #b300e0;
     }
+}
+
+body.dark .active {
+    --piano-button: #8e02b1;
+    --piano-button-shadow: #b300e0;
+
+    --piano-dark-button: #8e02b1;
+    --piano-dark-button-shadow: #b300e0;
 }
 
 main ul li:nth-child(2) {
