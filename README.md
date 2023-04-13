@@ -43,9 +43,25 @@ I've built a site that allows the user to play with notes using a simple piano p
 <img src="/readme/piano-v2.png" alt="screen shot of my website">
 
 
-## test
+## Test
+
+**First test:**
+
+The reaction was positive, but I noticed some negative points:
+- Additional buttons (Reset\Add Piano\ dark mode) are small.
+- The additional buttons (adding a piano / dark mode) are located in the lowest corners, so they were not quickly noticed.
+- Fix colors when changing the modث.
+- The pause button did not appear after playing the tones
 
 [![Test video 1](https://github.com/SundousKanaan/Music-maker/blob/580f17d543e27bcc602dd0dbd07f4acad07e9478/readme/test1.png)](https://youtu.be/cXxiZfbg25k)
+
+
+**The second test:**
+
+I fixed a large part of the previous mistakes from the first test.
+The reaction was positive and I was fortunate that this person had some knowledge of the piano.
+
+He was confused at first because the tone symbols didn't match the buttons like they would on a real piano so he advised me to try to improve on that.
 
 [![Test video 2](https://github.com/SundousKanaan/Music-maker/blob/580f17d543e27bcc602dd0dbd07f4acad07e9478/readme/test2.png)](https://youtu.be/Qp_TCf7uayI)
 
