@@ -42,6 +42,10 @@ I've built a site that allows the user to play with notes using a simple piano p
 
 <img src="/readme/piano-v2.png" alt="screen shot of my website">
 
+<img src="/readme/piano-v2-2.png" alt="screen shot of my website">
+
+
+
 
 ## Test
 
