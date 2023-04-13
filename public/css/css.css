@@ -1,0 +1,526 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-bg:#ffffe7;
+
+    --header-bg:#f2f2f2;
+    --tone-bg: #fbb4ae;
+    --tone-bg-shadow: #b8d7f0;
+    --button-width:4em;
+
+    --li-bg:rgb(200, 255, 250);
+
+    --piano-bg: #fddaec;
+    --piano-shadow: #f7b0d4;
+    --piano-button:white;
+    --piano-button-shadow:rgb(212, 212, 212);
+
+    /* --piano-dark-button:#decbe4;
+    --piano-dark-button-shadow:#c0a2c9; */
+
+    --piano-dark-button:#fbb4ae;
+    --piano-dark-button-shadow:#fa978e;
+
+    /* --piano-button-hover:#fbb4ae;
+    --piano-button-shadow-hover:#fa978e; */
+    
+    --piano-button-hover:#decbe4;
+    --piano-button-shadow-hover:#c0a2c9;
+
+    /* --piano-button-active:#b3cde3;
+    --piano-button-shadow-active:#062844; */
+
+    --controls-bg: var(--tone-bg);
+    --controls-bg-gradient:linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
+    --controls-button-bg: #b3cde3;
+    --controls-button-border: #7ca0be;
+
+    --footer-bg: #fddaec;
+}
+
+:focus{
+    outline: transparent;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--body-bg);
+    overflow-x: hidden;
+    /* padding-right: 1em; */
+}
+
+
+
+
+
+
+
+/* *********** */
+/*    header   */
+/* *********** */
+header{
+    width: 100%;
+    height: 13em;
+    background-color: var(--header-bg);
+
+    /* padding: 1em 2em 0 1em; */
+
+    padding: 1em 1em 0 1em;
+
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+
+    display: flex;
+}
+
+header ul{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    gap: 1%;
+}
+
+header ul li{
+    display: block;
+    width: calc(100%/20);
+    height: 100%;
+    background-color: var(--tone-bg);
+    background-image: linear-gradient(var(--tone-bg), var(--tone-bg-shadow));
+
+    transform-origin: bottom;
+    transform: scaleY(0);
+
+    border-radius: 50% 50% 0% 0% / 10% 10% 0% 0% ;
+
+    /* animation: music 1s infinite linear both; */
+}
+
+header ul li:nth-child(3),
+header ul li:nth-child(8),
+header ul li:nth-child(14){
+    height: 70%;
+}
+
+header ul li:nth-child(1),
+header ul li:nth-child(12),
+header ul li:nth-child(18){
+    height: 30%;
+}
+
+header ul li:nth-child(3),
+header ul li:nth-child(6),
+header ul li:nth-child(10),
+header ul li:nth-child(16){
+    height: 50%;
+}
+
+.playTone{
+    animation-iteration-count: infinite;
+}
+
+header ul:first-of-type li.pause{
+    animation: music 1s linear infinite both;
+    animation-play-state: paused;
+}
+
+/* header ul.playTone li.tone */
+header ul:first-of-type li.tone{
+    animation: music 1s linear infinite both;
+    animation-play-state: running;
+}
+
+@keyframes music {
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
+
+header ul:last-of-type li.tone{
+    animation: music2 .5s linear 1 both;
+}
+
+@keyframes music2 {
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
+
+
+
+/* *********** */
+/*     main    */
+/* *********** */
+main{
+    width: 100%;
+    height: calc(100vh - 16em);
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+}
+
+
+
+
+
+
+
+
+
+/*   controls  */
+/* *********** */
+
+main > section:first-of-type{
+    width: 100%;
+    height: 4em;
+    background-color: var(--controls-bg);
+    background-image: var(--controls-bg-gradient);
+    position: sticky;
+    top: 13em;
+    z-index: 100000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0 20%;
+
+}
+
+main > section:first-of-type button{
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 3.5em;
+    aspect-ratio: 1/1;
+
+    border: solid .3em var(--controls-button-border);
+    border-radius: 50%;
+
+    background-color: var(--controls-button-bg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .3s;
+}
+
+main > section:first-of-type button:first-of-type {
+    background-image: url(../images/play-sign.svg);
+    background-size: 50%;
+    visibility: hidden;
+}
+
+main > section:first-of-type button:first-of-type.activePlay,
+main > section:first-of-type button:nth-of-type(2).activePlay{
+    visibility: visible;
+}
+
+/* main > section:first-of-type button:first-of-type.play{
+    background-color: var(--piano-dark-button);
+} */
+
+main > section:first-of-type button:nth-of-type(2){
+    background-image: url(../images/pause-sign.svg);
+    background-size: 45%;
+    visibility: hidden;
+}
+
+main > section:first-of-type button:last-of-type{
+    background-image: url(../images/refresh-sign.svg);
+}
+
+main > section:first-of-type button:hover{
+    transform: scale(1.1) rotate(360deg);
+}
+
+main > section:first-of-type button:active{
+    transform: scale(.9);
+}
+
+
+
+
+/* plus button */
+/* *********** */
+
+main > button{
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: var(--button-width);
+    aspect-ratio: 1/1;
+
+    position: fixed;
+    bottom: 5.5em;
+    right: 3vw;
+    z-index: 100000;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--piano-bg);
+    background-image: url(../images/plus-sign.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid .3em var(--piano-shadow);
+    box-shadow: 0 0 .5em var(--controls-button-border);
+
+    transition: .5s;
+}
+
+main > button:hover{
+    transform: scale(1.1) rotate(360deg);
+    background-color: var(--controls-button-bg);
+    border: solid .3em var(--controls-button-border);
+}
+
+main > button:active{
+    transform: scale(.9);
+}
+
+main > button.hidden{
+    visibility: hidden;
+}
+
+
+
+
+
+
+/*  piano's  */
+/* ********* */
+
+main ul{
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 2em; */
+
+    /* background-color: red; */
+}
+
+main ul li{
+    width: 35em;
+    height: 15em;
+    background-color: var(--piano-bg);
+    box-shadow: 0 .5em var(--piano-shadow);
+    border-radius: 5% 5% 9% 9% / 10% 10% 20% 20% ;
+
+    position: relative;
+
+    padding: 0 .6em;
+    padding-bottom: .3em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr;
+    align-items: center;
+}
+
+/* main ul li:last-child{
+    margin-bottom: 10em;
+} */
+
+main ul li p{
+    width: 100%;
+    height: 100%;
+
+    grid-area: 1/1/2/2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul li > button{
+    grid-area: 1/1/2/2;
+    justify-self: end;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 3em;
+    aspect-ratio: 1/1;
+
+    border: none;
+    border-radius: 50%;
+    z-index: 1;
+
+    background-color: var(--piano-button);
+    background-image: url(../images/delete-sign.svg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+main ul li > button:hover{
+    background-color: var(--piano-button-hover);
+    background-size: 80%;
+    transform: rotate(360deg) scale(1.2);
+    border: solid .3em var(--piano-button-shadow-hover);
+}
+
+main ul li > button:active{
+    transform: scale(.7);
+}
+
+main ul li > div:first-of-type,
+main ul li >div:last-of-type{
+    width: 100%;
+    height: 100%;
+
+    grid-area: 2/1/3/2;
+
+
+    display: flex;
+    justify-content: center;
+}
+
+
+main ul li > div:last-of-type{
+    justify-self: center;
+    width: 82%;
+    height: 60%;
+
+    justify-content: space-between;
+    align-self: start;
+
+    z-index: 1;
+
+    position: relative;
+    top: -.5em;
+}
+
+main ul li > div button{
+    appearance: none;
+    -webkit-appearance: none;
+
+    height: 100%;
+    border: solid .15em var(--piano-bg);
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 1em;
+
+    background-color: var(--piano-button);
+
+    transition: .2s;
+    transform-origin: top;
+
+}
+
+main ul li > div:first-of-type button{
+    width: 3.8em;
+    box-shadow: inset 0em -.5em var(--piano-button-shadow);
+    border-radius: 25% 25% 50% 50% / 10% 10% 15% 15%;
+}
+
+main ul li > div:last-of-type button{
+    width: 3em;
+
+    background-color: var(--piano-dark-button);
+    box-shadow: inset 0 -.5em var(--piano-dark-button-shadow);
+
+    border-radius: 25% 25% 50% 50% / 10% 10% 20% 20%;
+}
+
+main ul li > div:last-of-type button:nth-of-type(3),
+main ul li > div:last-of-type button:nth-of-type(7){
+    visibility: hidden;
+}
+
+main ul li div button:focus-visible,
+main ul li div button:hover{
+    outline: transparent;
+    border: none;
+    background-color: var(--piano-button-hover);
+    box-shadow: inset 0 -.5em var(--piano-button-shadow-hover);
+    z-index: 1;
+}
+
+main ul li div button:active{
+    transform: scaleY(.9);
+}
+
+.active{
+    --piano-button:#b3cde3;
+    --piano-button-shadow:#7ca0be;
+
+    --piano-dark-button:#b3cde3;
+    --piano-dark-button-shadow:#7ca0be;
+}
+
+main ul li:nth-child(2){
+    display: none;
+}
+
+main ul li:nth-child(2).addPiano{
+    display: grid;
+}
+
+
+
+
+
+
+
+
+
+/* *********** */
+/*    footer   */
+/* *********** */
+
+footer{
+    width: 100%;
+    height: 3em;
+    background-color: var(--footer-bg);
+    position: fixed;
+    bottom: 0;
+    z-index: 100000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    width: fit-content;
+}
