@@ -1,4 +1,3 @@
-// const { log } = require("tone/build/esm/core/util/Debug");
 
 // let pianoList = document.querySelector("main > ul:first-of-type")
 let plusButton = document.querySelector("main > button")
@@ -67,16 +66,31 @@ refreshButton.addEventListener("click", () => {
         tones[i].classList.remove("tone");
     }
 
-    location.reload();
+    Tone.Transport.stop()
 })
-
 
 async function audioCheck() {
     for (let i = 0; i < pianoButtons.length; i++) {
-        if (pianoButtons[i].classList.contains('active')) {
-            console.log( i,"true");
+        // if (pianoButtons[i].classList.contains('active')) {
+        //     console.log("true");
+        //     Tone.Transport.start()
+        //     // break;
+        // }
+        if (pianoButtons[0].classList.contains('active')) {
+            console.log("true");
             Tone.Transport.start()
-            break;
+        }
+        else if (pianoButtons[1].classList.contains('active')) {
+            console.log("true");
+            Tone.Transport.start()
+        }
+        else if (pianoButtons[2].classList.contains('active')) {
+            console.log("true");
+            Tone.Transport.start()
+        }
+        else if (pianoButtons[3].classList.contains('active')) {
+            console.log("true");
+            Tone.Transport.start()
         }
         else {
             console.log("not selected");
@@ -85,64 +99,29 @@ async function audioCheck() {
     }
 }
 
+let array = ["C2", "D4", "E4" , "F4"]
 
-let array = [
-    "Bb6","D4","Db4","E4","Eb4","F4","G4","Gb4","A4","Ab4",
-    "B4","Bb4","Bb4","C5","F#4","D#4","D#4","F#2", "C4",
-
-    "Bb6","D4","Db4","E4","Eb4","F4","G4","Gb4","A4","Ab4",
-    "B4","Bb4","Bb4","C5","F#4","D#4","D#4","F#2", "C4"
-]
-
-for (let i = 0; i < pianoButtons.length; i++){
-    pianoButtons[i].innerHTML= array[i];
-}
-
-console.log(array.length , "array.length" , pianoButtons.length);
-
-for (let i = 0; i < pianoButtons.length; i++) {
+for (let i = 0; i < 4; i++) {
     pianoButtons[i].addEventListener("click", () => {
-        console.log([i] , "piano button" , array[i]);
-        if (i < 19) {
+        if (i < 4) {
             pianoButtons[i].classList.toggle("active");
-            if (pianoButtons[i].classList.contains('active')) {
-                const synthA = new Tone.AMSynth().toDestination();
-
-                const loopA = new Tone.Loop(time => {
-                    synthA.triggerAttackRelease(array[i], "8n", time);
-                }, "3n").start(0);
-
-                pianoButtons[i].synth = synthA;
-                pianoButtons[i].loop = loopA;
-
-            } else {
-                pianoButtons[i].synth.triggerRelease();
-                pianoButtons[i].loop.cancel();
-            }
-        } else if (i > 18 && i < pianoButtons.length) {
-                synth.triggerAttackRelease(array[i], '8n');
-            }
-
-        if (pianoButtons[i] == pianoButtons[1]) {
-            tones[1].classList.toggle("tone");
-            tones[12].classList.toggle("tone");
-
+            console.log("tone", [i]);
+            console.log(i);
         }
-        else if (pianoButtons[i] == pianoButtons[5]) {
-            tones[5].classList.toggle("tone");
-            tones[16].classList.toggle("tone");
 
-        }
-        else if (pianoButtons[i] == pianoButtons[20]) {
-            tones[20].classList.toggle("tone");
-            tones[30].classList.toggle("tone");
-        }
-        else if (pianoButtons[i] == pianoButtons[24]) {
-            tones[24].classList.toggle("tone");
-            tones[34].classList.toggle("tone");
-        }
-        else {
-            tones[i].classList.toggle("tone");
+        // if (pianoButtons[i] == pianoButtons[0]) {
+            const synthA = new Tone.FMSynth().toDestination();
+
+            const loopA = new Tone.Loop(time => {
+                synthA.triggerAttackRelease(array[i], "8n", time);
+            }, "2n").start(0);
+        // }
+
+        
+        if (!pianoButtons[i].classList.contains('active')) {
+            // pauseButton.classList.remove("activePlay");
+            // Tone.Transport.stop()
+            console.log("HIIIII");
 
         }
 
