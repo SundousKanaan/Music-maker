@@ -578,6 +578,35 @@ main ul li:nth-child(2).addPiano {
     margin-bottom: 7vh;
 }
 
+
+/* small screen */
+main ul.list{
+    display: none;
+}
+
+main ul.list li{
+    padding: 0.3em 0.6em;
+}
+
+main ul.list li p{
+    background-color: var(--piano-button);
+    grid-area:1/1/3/2;
+    border-radius: 5% 5% 9% 9% / 10% 10% 20% 20%;
+}
+
+
+@media (max-width: 35em) {
+    main ul:first-of-type{
+        display: none;
+    }
+
+    main ul.list{
+        display: grid;
+    }
+}
+
+
+
 @media (min-width: 992px) {
     main ul li:nth-child(2).addPiano {
         margin:0;
@@ -589,8 +618,6 @@ main ul li:nth-child(2).addPiano {
         transform: scale(1.3);
     }
 }
-
-
 
 
 
