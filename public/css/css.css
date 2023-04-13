@@ -11,6 +11,8 @@ html {
 }
 
 :root {
+    --text-color: #313131;
+
     --body-bg: #ffffe7;
 
     --header-bg: #f2f2f2;
@@ -48,6 +50,40 @@ html {
     --footer-bg: #fddaec;
 }
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: #d6d6d6;
+
+        --body-bg: #949494;
+    
+        --header-bg: #313131;
+        --tone-bg: #8f1d69;
+        --tone-bg-shadow: #8e00e0;
+        --button-width: 4em;
+    
+        --li-bg: rgb(200, 255, 250);
+    
+        --piano-bg: #313131;
+        --piano-shadow: #5c5c5c;
+        --piano-button: white;
+        --piano-button-shadow: rgb(212, 212, 212);
+    
+        --piano-dark-button: #8f1d69;
+        --piano-dark-button-shadow: #a3367f;
+    
+        --piano-button-hover: #decbe4;
+        --piano-button-shadow-hover: #c0a2c9;
+    
+        --controls-bg: var(--tone-bg);
+        --controls-bg-gradient: linear-gradient(var(--tone-bg-shadow), var(--tone-bg));
+        --controls-button-bg: #decbe4;
+        --controls-button-border: #c0a2c9;
+    
+        --footer-bg: #8f1d69;
+    }
+}
+
+
 :focus {
     outline: transparent;
 }
@@ -56,7 +92,14 @@ button {
     cursor: pointer;
 }
 
+p{
+    color: var(--text-color);
+    font-size: 2.5vw;
+}
+
+
 body {
+    font-family: 'Caveat', cursive;
     width: 100vw;
     height: 100vh;
 
@@ -64,7 +107,6 @@ body {
     overflow-x: hidden;
     /* padding-right: 1em; */
 }
-
 
 
 
@@ -265,7 +307,6 @@ header ul:last-of-type li:nth-child(2n+2) {
 
 
 
-
 /* *********** */
 /*     main    */
 /* *********** */
@@ -376,12 +417,12 @@ main>button {
     border: none;
     border-radius: 50%;
 
-    background-color: var(--piano-bg);
+    background-color: var(--piano-dark-button);
     background-image: url(../images/plus-sign.svg);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    border: solid .3em var(--piano-shadow);
+    border: solid .3em var(--piano-dark-button-shadow);
     box-shadow: 0 0 .5em var(--controls-button-border);
 
     transition: .5s;
@@ -568,6 +609,15 @@ main ul li div button:active {
     --piano-dark-button-shadow: #7ca0be;
 }
 
+@media (prefers-color-scheme: dark){
+    .active {
+        --piano-button: #8e02b1;
+        --piano-button-shadow: #b300e0;
+    
+        --piano-dark-button: #8e02b1;
+        --piano-dark-button-shadow: #b300e0;
+    }
+}
 main ul li:nth-child(2) {
     display: none;
 }
@@ -644,4 +694,6 @@ footer {
 
 footer p {
     width: fit-content;
+    font-size: 2vw;
+
 }
