@@ -3,6 +3,15 @@
 let plusButton = document.querySelector("main > button:first-of-type")
 let deleteButton = document.querySelector("main ul li:nth-child(2) > button")
 const noContext = document.querySelector("body");
+let jsNote = document.querySelectorAll("main > p:nth-of-type(-n+2)");
+
+for (let i = 0; i < jsNote.length; i++) {
+    jsNote[i].classList.add("noJS");    
+}
+
+console.log(jsNote);
+
+// noJS
 
 noContext.addEventListener("contextmenu", (e) => {
     e.preventDefault();

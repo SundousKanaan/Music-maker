@@ -755,8 +755,22 @@ main ul.list li p{
 
 
 
+main > p{
+    width: 100%;
+    text-align: center;
+    color: var(--piano-dark-button-shadow);
 
+    display: block;
+}
 
+main > p:nth-of-type(-n+2).noJS{
+    display: none;
+    padding-top: .5em;
+}
+
+main > p:last-of-type{
+    display: none;
+}
 
 
 /* *********** */
