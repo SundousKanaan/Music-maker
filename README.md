@@ -109,6 +109,9 @@ He was confused at first because the tone symbols didn't match the buttons like 
 - The piano works with keyboard (tab/speac/enter) ✅
 - The piano works with letters from the keyboard ❌
 - work good on Chrome, Firefox and Samsung Internet ✅
+- No JS?
+<img src="/readme/no-js.png" alt="no js support">
+
 
 ## Sources
 - [icons](https://www.svgrepo.com/svg/509392/refresh)
