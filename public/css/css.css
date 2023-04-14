@@ -106,7 +106,6 @@ body {
 
     background-color: var(--body-bg);
     overflow-x: hidden;
-    /* padding-right: 1em; */
 }
 
 body.dark{
